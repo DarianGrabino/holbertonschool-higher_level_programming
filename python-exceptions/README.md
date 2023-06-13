@@ -17,12 +17,16 @@ except ZeroDivisionError:
 ```
 
 ### Excepciones en Python:
-En Python, existen diversos tipos de excepciones integradas que se utilizan para manejar errores y situaciones excepcionales durante la ejecución de un programa. Algunos ejemplos comunes de excepciones incluyen:
+Existen diversos tipos de excepciones integradas que se utilizan para manejar errores y situaciones excepcionales durante la ejecución de un programa. Algunos ejemplos comunes de excepciones incluyen:
 
 **TypeError**: Se produce cuando se realiza una operación en un tipo incorrecto de objeto.
+
 **ValueError**: Se produce cuando una función recibe un argumento con un valor incorrecto.
+
 **ZeroDivisionError**: Se produce cuando se intenta dividir un número por cero.
+
 **IndexError**: Se produce cuando se intenta acceder a un índice inválido en una secuencia (como una lista o una cadena).
+
 **FileNotFoundError**: Se produce cuando se intenta abrir un archivo que no existe.
 
 Uso de la cláusula **finally**:
