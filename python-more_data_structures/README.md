@@ -5,9 +5,9 @@ Es una estructura de datos que permite almacenar elementos en pares clave-valor.
 Un diccionario se define utilizando llaves {} y los pares clave-valor se separan por dos puntos :. La clave puede ser de cualquier tipo inmutable, como una cadena de texto o un número, y el valor puede ser de cualquier tipo, incluyendo listas, conjuntos, tuplas u otros diccionarios.
 
 ## Operadores:
-^ (Diferencia Simétrica): El operador ^ realiza una diferencia simétrica entre dos conjuntos. Devuelve un nuevo conjunto con elementos que están presentes en uno u otro conjunto, pero no en ambos al mismo tiempo.
+**^** (Diferencia Simétrica): El operador ^ realiza una diferencia simétrica entre dos conjuntos. Devuelve un nuevo conjunto con elementos que están presentes en uno u otro conjunto, pero no en ambos al mismo tiempo.
 
-& (Intersección): El operador & se utiliza para encontrar la intersección entre dos conjuntos. Devuelve un nuevo conjunto que contiene solo los elementos comunes a ambos conjuntos.
+**&** (Intersección): El operador & se utiliza para encontrar la intersección entre dos conjuntos. Devuelve un nuevo conjunto que contiene solo los elementos comunes a ambos conjuntos.
 
 ## Funciones:
 **sum(iterable)**: La función sum se utiliza para calcular la suma de los elementos en un iterable (como una lista o un conjunto) y devuelve el resultado.
