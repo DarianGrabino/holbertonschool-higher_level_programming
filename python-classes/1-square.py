@@ -3,6 +3,7 @@
 
 
 class Square:
-    """Define a class Square with attribute"""
+    """Define a class Square"""
     def __init__(self, size):
+        """initialize the class with an attribute"""
         self._size = size
