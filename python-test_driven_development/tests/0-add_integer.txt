@@ -11,6 +11,9 @@ Simple Test
 >>> add_integer(-1, 2)
 1
 
+>>> add_integer(100.3, -2)
+98
+
 >>> add_integer(5, "q")
 Traceback (most recent call last):
 ...
