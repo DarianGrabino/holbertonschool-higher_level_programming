@@ -23,6 +23,11 @@ ZeroDivisionError: division by zero
 >>> matrix_divided(matrix, float('inf'))
 [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
 
+>>> matrix_divided([['a', 'a', 'a'], ['a', 'a', 'a']], 3)
+Traceback (most recent call last):
+...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
 >>> matrix_divided()
 Traceback (most recent call last):
 ...
