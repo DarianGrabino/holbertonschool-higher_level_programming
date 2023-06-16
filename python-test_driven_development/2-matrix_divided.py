@@ -3,13 +3,13 @@
 
 
 def matrix_divided(matrix, div):
-    """divides all elements of a matrix"""
+    """ divides all elements of a matrix by div """
     new_matrix = []
     for row in matrix:
         for element in row:
-            if not isinstance(element, (int, float)):
+            if (type(element)) != int and (type(element)) != float:
                 raise TypeError("matrix must be a matrix \
-                                (list of lists) of integers/floats")
+(list of lists) of integers/floats")
     if len(matrix) > 1:
         if len(matrix[0]) != len(matrix[1]):
             raise TypeError("Each row of the matrix must have the same size")
@@ -18,6 +18,6 @@ def matrix_divided(matrix, div):
     if div == 0:
         raise ZeroDivisionError("division by zero")
     for row in matrix:
-        new_row = list(map(lambda n: round(n / div, 2), row))
+        new_row = list(map(lambda n: round(n/div, 2), row))
         new_matrix.append(new_row)
     return new_matrix
