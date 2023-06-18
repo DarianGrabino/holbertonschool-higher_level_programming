@@ -20,3 +20,6 @@ class TestMaxInteger(unittest.TestCase):
     def test_only(self):
         result = max_integer([94])
         self.assertEqual(result, 94)
+    def test_unorderer(self):
+        result = max_integer([2, -3, 4, -6])
+        self.assertEqual(result, 4)
