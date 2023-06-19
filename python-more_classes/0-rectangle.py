@@ -2,6 +2,7 @@
 """Define a class"""
 
 
-class Rectangle():
-    """ empty class rectanglue"""
-    pass
+class Rectangle:
+    """empty class rectangle"""
+    def __init__(self) -> None:
+        pass
