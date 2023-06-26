@@ -17,5 +17,6 @@ class Student:
         return {k: v for k, v in self.__dict__.items() if k in attrs}
 
     def reload_from_json(self, json):
+        """change attributes to student instance dict"""
         for key, value in json.item():
             setattr(self, key, value)
