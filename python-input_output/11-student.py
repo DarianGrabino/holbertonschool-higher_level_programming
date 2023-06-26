@@ -18,5 +18,5 @@ class Student:
 
     def reload_from_json(self, json):
         """change attributes to student instance dict"""
-        for key, value in json.item():
-            setattr(self, key, value)
+        for key in json:
+            setattr(self, key, json.get(key))
