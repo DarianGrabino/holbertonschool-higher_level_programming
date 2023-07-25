@@ -100,8 +100,13 @@ Es importante recordar que DDL se utiliza para definir la estructura de la base 
 
 ### Install MySQL 8.0 on Ubuntu 20.04 LTS
 $ sudo apt update
+
 $ sudo apt install mysql-server
+
 $ mysql --version
+
 $ sudo service mysql status
+
 $ sudo service mysql start
+
 $ sudo mysql
