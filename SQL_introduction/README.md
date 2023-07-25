@@ -41,7 +41,7 @@ CREATE: Se usa para crear objetos en la base de datos, como tablas, vistas, índ
 Ejemplo de creación de una tabla:
 
 ```sql
-CREATE TABLE empleados (
+CREATE DATABASE empleados (
     id INT PRIMARY KEY,
     nombre VARCHAR(50),
     salario DECIMAL(10, 2)
@@ -53,7 +53,7 @@ ALTER: Permite modificar la estructura de la base de datos, como agregar o elimi
 Ejemplo de agregar una columna a una tabla existente:
 
 ``` sql
-ALTER TABLE empleados
+ALTER DATABASE empleados
 ADD fecha_contrato DATE;
 ```
 
@@ -62,7 +62,7 @@ DROP: Se utiliza para eliminar objetos de la base de datos, como tablas o vistas
 Ejemplo de eliminación de una tabla:
 
 ``` sql
-DROP TABLE empleados;
+DROP DATABASE empleados;
 ```
 
 ### DML (Data Manipulation Language):
@@ -113,3 +113,13 @@ $ sudo service mysql status
 $ sudo service mysql start
 
 $ sudo mysql
+
+$ mysql -hlocalhost -uroot -p
+
+*mysql*: abrirá la interfaz de línea de comandos de MySQL y estarás listo para ingresar consultas y comandos SQL.
+
+*-hlocalhost*: Es el parámetro que especifica el host (servidor) al que te quieres conectar. En este caso, localhost indica que te estás conectando al servidor de MySQL que se está ejecutando en la misma máquina en la que estás trabajando. Si el servidor de MySQL está en otra máquina, debes proporcionar su dirección IP o nombre de host en lugar de localhost
+
+*-uroot*: Es el parámetro que indica el nombre de usuario con el que te quieres conectar al servidor de MySQL. En este caso, estás utilizando el usuario "root", que es el superusuario con todos los privilegios en el servidor de MySQL.
+
+*-p*: Es el parámetro que indica que se requiere una contraseña para la conexión. Al incluir -p, se le solicitará que ingreses la contraseña del usuario "root" de MySQL para poder acceder a la interfaz de línea de comandos de MySQL.
