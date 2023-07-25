@@ -56,6 +56,7 @@ Ejemplo de agregar una columna a una tabla existente:
 ALTER TABLE empleados
 ADD fecha_contrato DATE;
 ```
+
 DROP: Se utiliza para eliminar objetos de la base de datos, como tablas o vistas.
 
 Ejemplo de eliminación de una tabla:
@@ -69,13 +70,16 @@ DROP TABLE empleados;
 
 DML (Lenguaje de Manipulación de Datos) es otro conjunto de comandos SQL que se utilizan para gestionar los datos dentro de las tablas. Estos comandos permiten insertar, actualizar y eliminar registros en la base de datos. Algunos ejemplos de comandos DML son:
 
+INSERT: Se usa para agregar nuevos registros a una tabla.
+
 Ejemplo de inserción de datos en la tabla "empleados":
 
 ``` sql
 INSERT INTO empleados (id, nombre, salario)
 VALUES (1, 'Juan Pérez', 3500.00);
-UPDATE: Permite actualizar registros existentes en una tabla.
 ```
+
+UPDATE: Permite actualizar registros existentes en una tabla.
 
 Ejemplo de actualización del salario para un empleado específico:
 
@@ -83,8 +87,9 @@ Ejemplo de actualización del salario para un empleado específico:
 UPDATE empleados
 SET salario = 4000.00
 WHERE id = 1;
-DELETE: Se utiliza para eliminar registros de una tabla.
 ```
+
+DELETE: Se utiliza para eliminar registros de una tabla.
 
 Ejemplo de eliminación de un empleado específico de la tabla:
 
