@@ -6,6 +6,21 @@ Una base de datos es una colección organizada de información que se almacena d
 ### ¿Qué es una base de datos relacional?
 Una base de datos relacional es un tipo de base de datos que organiza los datos en tablas con filas y columnas. Establece relaciones entre tablas utilizando claves primarias y claves foráneas.
 
+### Crear base de datos
+```sql
+CREATE DATABASE nombre_de_la_base_de_datos;
+```
+
+### Mostrar base de datos
+```sql
+SHOW DATABASES;
+```
+
+### Eliminar base de datos
+```sql
+DROP DATABASE nombre_de_la_base_de_datos;
+```
+
 ### Clave Primaria (Primary Key):
 
 Una clave primaria es una columna o un conjunto de columnas que identifica de forma única cada fila en una tabla. Sus principales características son:
@@ -41,7 +56,7 @@ CREATE: Se usa para crear objetos en la base de datos, como tablas, vistas, índ
 Ejemplo de creación de una tabla:
 
 ```sql
-CREATE DATABASE empleados (
+CREATE TABLE empleados (
     id INT PRIMARY KEY,
     nombre VARCHAR(50),
     salario DECIMAL(10, 2)
@@ -53,7 +68,7 @@ ALTER: Permite modificar la estructura de la base de datos, como agregar o elimi
 Ejemplo de agregar una columna a una tabla existente:
 
 ``` sql
-ALTER DATABASE empleados
+ALTER TABLE empleados
 ADD fecha_contrato DATE;
 ```
 
@@ -62,7 +77,7 @@ DROP: Se utiliza para eliminar objetos de la base de datos, como tablas o vistas
 Ejemplo de eliminación de una tabla:
 
 ``` sql
-DROP DATABASE empleados;
+DROP TABLE empleados;
 ```
 
 ### DML (Data Manipulation Language):
@@ -115,6 +130,8 @@ $ sudo service mysql start
 $ sudo mysql
 
 $ mysql -hlocalhost -uroot -p
+
+
 
 *mysql*: abrirá la interfaz de línea de comandos de MySQL y estarás listo para ingresar consultas y comandos SQL.
 
