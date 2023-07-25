@@ -41,7 +41,6 @@ CREATE: Se usa para crear objetos en la base de datos, como tablas, vistas, índ
 Ejemplo de creación de una tabla:
 
 ```sql
-Copy code
 CREATE TABLE empleados (
     id INT PRIMARY KEY,
     nombre VARCHAR(50),
@@ -54,7 +53,6 @@ ALTER: Permite modificar la estructura de la base de datos, como agregar o elimi
 Ejemplo de agregar una columna a una tabla existente:
 
 ``` sql
-Copy code
 ALTER TABLE empleados
 ADD fecha_contrato DATE;
 ```
@@ -63,7 +61,6 @@ DROP: Se utiliza para eliminar objetos de la base de datos, como tablas o vistas
 Ejemplo de eliminación de una tabla:
 
 ``` sql
-Copy code
 DROP TABLE empleados;
 ```
 
@@ -77,7 +74,6 @@ INSERT: Se usa para agregar nuevos registros a una tabla.
 Ejemplo de inserción de datos en la tabla "empleados":
 
 ``` sql
-Copy code
 INSERT INTO empleados (id, nombre, salario)
 VALUES (1, 'Juan Pérez', 3500.00);
 UPDATE: Permite actualizar registros existentes en una tabla.
@@ -86,7 +82,6 @@ UPDATE: Permite actualizar registros existentes en una tabla.
 Ejemplo de actualización del salario para un empleado específico:
 
 ```sql
-Copy code
 UPDATE empleados
 SET salario = 4000.00
 WHERE id = 1;
@@ -96,7 +91,6 @@ DELETE: Se utiliza para eliminar registros de una tabla.
 Ejemplo de eliminación de un empleado específico de la tabla:
 
 ``` sql
-Copy code
 DELETE FROM empleados
 WHERE id = 1;
 ```
