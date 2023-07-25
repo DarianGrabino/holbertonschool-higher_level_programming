@@ -69,8 +69,6 @@ DROP TABLE empleados;
 
 DML (Lenguaje de Manipulación de Datos) es otro conjunto de comandos SQL que se utilizan para gestionar los datos dentro de las tablas. Estos comandos permiten insertar, actualizar y eliminar registros en la base de datos. Algunos ejemplos de comandos DML son:
 
-INSERT: Se usa para agregar nuevos registros a una tabla.
-
 Ejemplo de inserción de datos en la tabla "empleados":
 
 ``` sql
