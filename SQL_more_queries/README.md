@@ -95,7 +95,5 @@ Supongamos que tenemos dos tablas: clientes1 y clientes2. Ambas tablas contienen
 Para obtener una lista combinada de todos los nombres de clientes de ambas tablas, utilizamos el siguiente UNION:
 
 ```sql
-SELECT nombre FROM clientes1
-UNION
-SELECT nombre FROM clientes2;
+SELECT nombre FROM clientes1 UNION SELECT nombre FROM clientes2;
 ```
