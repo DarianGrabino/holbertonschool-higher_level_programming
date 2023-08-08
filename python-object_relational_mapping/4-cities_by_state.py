@@ -7,14 +7,14 @@ import MySQLdb
 def lists_states():
     """ lists all cities from the database """
 
-    db = MySQLdb.connect(
+    db_conection = MySQLdb.connect(
         host="localhost",
         user=argv[1],
         password=argv[2],
         db=argv[3]
     )
 
-    cursor = db.cursor()
+    cursor = db_conection.cursor()
     cursor.execute(
         "SELECT ROW_NUMBER() OVER(), cities.name,states.name \
         FROM cities, states WHERE state_id = states.id"
