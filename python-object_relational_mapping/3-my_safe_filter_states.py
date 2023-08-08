@@ -7,14 +7,14 @@ import MySQLdb
 def lists_states():
     """displays all values of database where name matches the argument"""
 
-    db = MySQLdb.connect(
+    db_conection = MySQLdb.connect(
         host="localhost",
         user=argv[1],
         password=argv[2],
         db=argv[3]
     )
 
-    cursor = db.cursor()
+    cursor = db_conection.cursor()
     cursor.execute(
         "SELECT * FROM states WHERE name LIKE BINARY %s", (argv[4],)
         # %s technique parametrización de consultas to avoid sql injection
