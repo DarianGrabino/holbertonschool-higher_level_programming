@@ -17,8 +17,8 @@ def add_states():
     Session = sessionmaker(bind=engine)
     session = Session()
     session.query(State).get(2).name = "New Mexico"
-    #para realizar una consulta más compleja
-    #query().filter_by().first() puede ser mejor.
+    # para realizar una consulta más compleja
+    # query().filter_by().first() puede ser mejor.
     session.commit()
     session.close()
 
