@@ -3,7 +3,7 @@
 import sys
 from sqlalchemy import create_engine
 from model_state import Base, State
-from sqlalchemy.orm import Session
+from sqlalchemy.orm import sessionmaker
 
 
 def lists_states():
@@ -14,7 +14,8 @@ def lists_states():
     engine = create_engine(
         'mysql+mysqldb://{}:{}@localhost/{}'.format(user, password, db)
         )
-    session = Session(engine)
+    Session = sessionmaker(bind=engine)
+    session = Session()
 
     for state in session.query(State).order_by(State.id):
         if state.name == sys.argv[4]:
