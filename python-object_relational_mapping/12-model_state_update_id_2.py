@@ -3,7 +3,7 @@
 import sys
 from sqlalchemy import create_engine
 from model_state import Base, State
-from sqlalchemy.orm import Session
+from sqlalchemy.orm import sessionmaker
 
 
 def add_states():
@@ -14,10 +14,12 @@ def add_states():
     engine = create_engine(
         'mysql+mysqldb://{}:{}@localhost/{}'.format(user, password, db)
         )
-    session = Session(engine)
+    Session = sessionmaker(bind=engine)
+    session = Session()
     session.query(State).get(2).name = "New Mexico"
+    #para realizar una consulta más compleja
+    #query().filter_by().first() puede ser mejor.
     session.commit()
-
     session.close()
 
 
