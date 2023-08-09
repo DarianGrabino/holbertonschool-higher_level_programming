@@ -3,6 +3,7 @@
 import sys
 from sqlalchemy import create_engine
 from model_state import Base, State
+from sqlalchemy.orm import sessionmaker
 
 
 def lists_states():
@@ -13,11 +14,15 @@ def lists_states():
     engine = create_engine(
         'mysql+mysqldb://{}:{}@localhost/{}'.format(user, password, db)
         )
-    connection = engine.connect()
-    result = connection.execute('SELECT * FROM states')
-    for elem in result:
-        print(f"{elem[0]}: {elem[1]}")
+    
+    Session = sessionmaker(bind=engine)
+    session = Session()
+    states = session.query(State).all()
+    
+    for state in states:
+        print(f"{state.id}: {state.name}")
 
+    session.close()
 
 if __name__ == '__main__':
     lists_states()
