@@ -14,15 +14,16 @@ def lists_states():
     engine = create_engine(
         'mysql+mysqldb://{}:{}@localhost/{}'.format(user, password, db)
         )
-    
+
     Session = sessionmaker(bind=engine)
     session = Session()
     states = session.query(State).all()
-    
+
     for state in states:
         print(f"{state.id}: {state.name}")
 
     session.close()
+
 
 if __name__ == '__main__':
     lists_states()
