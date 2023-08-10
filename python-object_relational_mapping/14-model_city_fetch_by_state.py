@@ -7,7 +7,6 @@ from model_city import City
 from sqlalchemy.orm import sessionmaker
 
 
-
 def add_states():
     """Add a new state"""
     user = sys.argv[1]
@@ -19,7 +18,8 @@ def add_states():
 
     Session = sessionmaker(bind=engine)
     session = Session()
-    cities_states = session.query(City, State).join(State).order_by(City.id).all()
+    cities_states = session.query(City, State).join(State)\
+        .order_by(City.id).all()
     for city, state in cities_states:
         print(f"{state.name}: ({city.id}) {city.name}")
 
