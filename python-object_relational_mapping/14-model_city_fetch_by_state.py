@@ -2,7 +2,10 @@
 """Start link class to table in database"""
 import sys
 from sqlalchemy import create_engine
-from model_state import Base, City
+from model_state import Base, State
+from model_city import City
+from sqlalchemy.orm import sessionmaker
+
 
 
 def add_states():
@@ -13,13 +16,12 @@ def add_states():
     engine = create_engine(
         'mysql+mysqldb://{}:{}@localhost/{}'.format(user, password, db)
         )
-    result = engine.execute('SELECT states.name, cities.id, cities.name \
-                            FROM cities, states \
-                            WHERE states.id = cities.state_id')
-    rows = result.fetchall()
-    for row in rows:
-        print(f"{row[0]}: ({row[1]}) {row[2]}")
-    result.close()
+
+    Session = sessionmaker(bind=engine)
+    session = Session()
+    cities_states = session.query(City, State).join(State).order_by(City.id).all()
+    for city, state in cities_states:
+        print(f"{state.name}: ({city.id}) {city.name}")
 
 
 if __name__ == '__main__':
